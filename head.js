@@ -1,4 +1,5 @@
 const assertEqual = function(actual, expected) {
+  // Output passing/failing messages (emojis included)
   if (actual === expected) {
     console.log(`${String.fromCodePoint(0x2705)} Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -7,10 +8,11 @@ const assertEqual = function(actual, expected) {
 };
 
 const head = function(array) {
+  // Check if array is empty
   if (!array.length) {
     return undefined;
   }
-
+  // Return first value in array
   return array[0];
 };
 
