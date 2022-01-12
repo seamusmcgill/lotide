@@ -26,3 +26,4 @@ const countLetters = function(sentence) {
 assertEqual(countLetters("lighthouse in the house")["h"], 4);
 assertEqual(countLetters("LHL")["L"], 2);
 assertEqual(countLetters("Giannis Antetokounmpo")["n"], 4);
+assertEqual(countLetters("Seamus")["x", undefined]);
