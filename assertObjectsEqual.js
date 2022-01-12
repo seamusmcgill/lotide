@@ -59,4 +59,13 @@ const raptorsStarters = {
   PG: "Fred VanVleet",
 };
 
+const raptorsStartersShuffle = {
+  PG: "Fred VanVleet",
+  SF: "OG Anunoby",
+  C: "Pascal Siakam",
+  PF: "Scottie Barnes",
+  SG: "Gary Trent Jr.",
+};
+
 assertObjectsEqual(bestTVShowsByGenre, raptorsStarters);
+assertObjectsEqual(raptorsStarters, raptorsStartersShuffle);
