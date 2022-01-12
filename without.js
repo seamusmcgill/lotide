@@ -18,8 +18,16 @@ const assertArraysEqual = function(array1, array2) {
 };
 
 const without = function(source, itemsToRemove) {
-  let output = source.filter(element => (!itemsToRemove.includes(element)));
-  return output;
+  // Loop through source and itemsToRemove arrays
+  source.forEach((element, index) => {
+    itemsToRemove.forEach(item => {
+      // If element is in itemsToRemove splice it from the array
+      if (element === item) {
+        source.splice(index, 1);
+      }
+    });
+  });
+  return source;
 };
 
 assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
