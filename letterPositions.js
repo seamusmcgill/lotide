@@ -15,9 +15,9 @@ const assertArraysEqual = function(array1, array2) {
   // Check if arrays are equivalent or not
   if (eqArrays(array1, array2)) {
     console.log(`${String.fromCodePoint(0x2705)} Assertion Passed: ${array1} === ${array2}`);
-  } else {
-    console.log(`${String.fromCodePoint(0x274C)} Assertion Failed: ${array1} === ${array2}`);
+    return;
   }
+  console.log(`${String.fromCodePoint(0x274C)} Assertion Failed: ${array1} === ${array2}`);
 };
 
 const letterPositions = function(sentence) {
@@ -29,11 +29,11 @@ const letterPositions = function(sentence) {
       continue;
     }
     // Add indices to letters in object
-    if (output[sentence[i]]) {
-      output[sentence[i]].push(i);
-    } else {
+    if (!output[sentence[i]]) {
       output[sentence[i]] = [i];
+      continue;
     }
+    output[sentence[i]].push(i);
   }
   return output;
 };
