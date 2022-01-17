@@ -43,11 +43,10 @@ const eqObjects = function(object1, object2) {
       }
     }
     // Otherwise check equivalency of primitive values
-    if (object1[key] !== object2[key]) {
-      if (!eqObjects(object1[key], object2[key])) {
-        return false;
-      }
+    if (!eqObjects(object1[key], object2[key])) {
+      return false;
     }
+  
   }
   return true;
 };
