@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@seamusmcgill/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "A mini clone of the [Lodash](https://lodash.com) library.",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/seamusmcgill/lotide.git"
   },
-  "author": "",
+  "author": {
+    "name" : "Seamus McGill",
+    "email" : "seamusmcgill@gmail.com",
+    "url" : "https://github.com/seamusmcgill"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/seamusmcgill/lotide/issues"
