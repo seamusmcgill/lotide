@@ -20,7 +20,6 @@ const eqArrays = function(array1, array2) {
   }
   return true;
 };
-
 const eqObjects = function(object1, object2) {
   // Immediately return false if objects don't have the same number of keys
   if (Object.keys(object1).length !== Object.keys(object2).length) {
@@ -33,17 +32,13 @@ const eqObjects = function(object1, object2) {
       if (object1[key] !== object2[key]) {
         return false;
       }
-      continue;
-    }
-    // Check if the value is an array
-    if (Array.isArray(object1[key])) {
+    } else if (Array.isArray(object1[key])) {
       // Check if the arrays are equivalent
       if (!eqArrays(object1[key], object2[key])) {
         return false;
       }
-    }
-    // Otherwise check equivalency of primitive values
-    if (!eqObjects(object1[key], object2[key])) {
+      // Must be object - check if equivalent using recursion
+    } else if (!eqObjects(object1[key], object2[key])) {
       return false;
     }
   
