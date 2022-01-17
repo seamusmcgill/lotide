@@ -10,12 +10,7 @@ const eqArrays = function(array1, array2) {
       if (array1[i] !== array2[i]) {
         return false;
       }
-      // Skip to end of loop
-      continue;
-    }
-    
-    // Run recursive function on array elements
-    if (!eqArrays(array1[i], array2[i])) {
+    } else if (!eqArrays(array1[i], array2[i])) {
       return false;
     }
   }
